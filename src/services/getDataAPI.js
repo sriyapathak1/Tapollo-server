@@ -11,17 +11,21 @@ class DataCheckAPI extends RESTDataSource {
     getDataResponse(){
         try {
             console.log('----api success---');
-            
-            return this.get('todos/1/');
-
+            return this.get('todos');
           } catch (err) {
             console.log('--api eroor is here');
-            
             throw err;
           }
-       
-        // return this.get('todos/1/');
     }
+    getPostDataResponse(){
+      try {
+          console.log('----api success---');
+          return this.get('posts');
+        } catch (err) {
+          console.log('--api eroor is here');
+          throw err;
+        }
+  }
 }
 
 export default DataCheckAPI;
