@@ -9,7 +9,9 @@ const typeDefs = mergeTypes(typeArrays, { all: true });
 console.log('====here is resolver page ========',Resolvers);
 
 const resolvers = {
-    ...Resolvers
+    Query: {
+        ...Resolvers
+    }
 }
 export {
     resolvers,

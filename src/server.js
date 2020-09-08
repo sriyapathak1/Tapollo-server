@@ -15,14 +15,14 @@ console.log('======resolver====', resolvers);
 
 
 export const server = new ApolloServer({
-  // dataSources: () => (
+  dataSources: () => (
     
-  //   {
-  //     // console.log('-----');
+    {
+      // console.log('-----');
       
-  //     dataStreamsAPI: new DataCheckAPI(),
-  //     // console.log('=====inside server======'),
-  //   }),
+      dataStreamsAPI: new DataCheckAPI(),
+      // console.log('=====inside server======'),
+    }),
     schema: makeExecutableSchema({typeDefs, resolvers}),
     
     onHealthCheck: () => new Promise((resolve) => {
